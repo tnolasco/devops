@@ -1,0 +1,7 @@
+---
+
+- name: instala docker
+  hosts: docker
+  roles:
+   #- docker
+   - container

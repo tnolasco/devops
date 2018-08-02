@@ -1,0 +1,4 @@
+---
+- name: instalando o client...
+  package:
+   name: puppet-agent

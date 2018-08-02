@@ -1,0 +1,5 @@
+---
+- name: verificando se o index.html exist
+  template:
+   src: ../files/index.html
+   dest: /var/www/html/index.html

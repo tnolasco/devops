@@ -1,0 +1,12 @@
+---
+# tasks file for puppet
+- name: Instalar o repositorio
+  include: puppet_repo.yaml
+
+- name: Instalar o puppet server
+  include: puppet_server.yaml
+  when: ansible_hostname == "devops"
+
+- name: Instalar o puppet client
+  include: puppet_client.yaml
+  when: ansible_hostname == "automation" or ansible_hostname == "docker"

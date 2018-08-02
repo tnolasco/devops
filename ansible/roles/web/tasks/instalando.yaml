@@ -1,0 +1,22 @@
+---
+- name: instalando o pachao... (Debian)
+  apt:
+   name: apache2
+  when: ansible_os_family == "Debian"
+
+- name: instalando o pachao... (Red Hat)
+  yum:
+   name: httpd
+  when: ansible_os_family == "RedHat"
+
+- name: Restart service httpd, in all cases
+  service:
+    name: apache2
+    state: started
+  when: ansible_os_family == "Debian"
+
+- name: Restart service httpd, in all cases
+  service:
+    name: httpd
+    state: started
+  when: ansible_os_family == "RedHat"

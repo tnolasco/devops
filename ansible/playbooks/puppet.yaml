@@ -1,0 +1,6 @@
+---
+
+- name: chamando a role do puppet
+  hosts: all
+  roles:
+   - puppet

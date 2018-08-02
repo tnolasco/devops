@@ -1,0 +1,11 @@
+---
+- name: return code
+  hosts: all
+  tasks: 
+   - name: testando o arquivo no profile
+     command: test -f /etc/profile.d/dexter
+     register: result
+
+   - name: configurando uma var
+     shell: echo "export DEXTER=/opt/dexter > /etc/profile.d/dexter"
+     when: result.rc == 0

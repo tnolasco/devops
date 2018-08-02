@@ -1,0 +1,7 @@
+---
+# tasks file for web
+- name: instalando...............................
+  include: instalando.yaml
+
+- name: criando..................................
+  include: create.yaml

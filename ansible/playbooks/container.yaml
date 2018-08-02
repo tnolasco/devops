@@ -1,0 +1,5 @@
+---
+- name: Container
+  hosts: docker
+  roles:
+   - container

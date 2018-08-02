@@ -1,0 +1,19 @@
+- name: Instalando pacotes (Debian)
+  apt:
+   name: "{{ item }}"
+  with_items:
+    - vim
+    - nano
+    - sl
+    - cowsay
+  when: ansible_os_family == "Debian"
+
+- name: Instalando pacotes (RedHat)
+  yum:
+   name: "{{ item }}"
+  with_items:
+    - epel-release
+    - vim
+    - nano
+    - sl
+  when: ansible_os_family == "RedHat"

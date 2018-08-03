@@ -1,0 +1,5 @@
+---
+- name: Sapeca o gitlab-ce
+  hosts: devops
+  roles:
+   - gitlab

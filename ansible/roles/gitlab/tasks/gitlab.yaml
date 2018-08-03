@@ -1,0 +1,10 @@
+- name: Botando o gitlab
+  shell: " curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash "
+
+- name: adicionando a variavel da url
+  shell: " EXTERNAL_URL='http://devops.dexter.com.br' "
+
+- name: "instalando o gitlab"
+  apt:
+   name: gitlab-ce
+   update_cache: yes

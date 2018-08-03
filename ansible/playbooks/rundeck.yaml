@@ -1,0 +1,18 @@
+---
+- name: instalando o rundeck
+  hosts: automation
+  tasks:
+   - name: instalando o epel-release
+     package:
+      name: epel-release
+
+   - name: instalando o java
+     package: 
+      name: java-1.8.0
+
+   - name: adicionando o repositorio do rundeck
+     shell: "rpm -Uvh http://repo.rundeck.org/latest.rpm "
+ 
+   - name: instalando o rundeck
+     package:
+      name: rundeck 

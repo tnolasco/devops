@@ -1,0 +1,5 @@
+- name: instalando o rundeck
+  tasks:
+   - name: instalando o rundeck
+     package:
+      name: rundeck 

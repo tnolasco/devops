@@ -1,0 +1,10 @@
+- name: xoxa o gitlab
+  tasks:
+   - name: botando os debs
+     apt:
+      name: "{{ item }}"
+     with_items:
+      - curl
+      - openssh-server
+      - ca-certificates
+      - postfix

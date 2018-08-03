@@ -1,0 +1,5 @@
+---
+# tasks file for gitlab
+- name: install gitlab
+  include: instalar_prereq.yaml
+  include: gitlab.yaml
